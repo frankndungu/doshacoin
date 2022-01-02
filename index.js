@@ -37,10 +37,37 @@ class Blockchain {
     newBlock.hash = newBlock.calculateHash();
     this.chain.push(newBlock);
   }
+  //validating the blockchain
+  isChainValid() {
+    for (let i = 1; i < this.chain.length; i++) {
+      const currentBlock = this.chain[i];
+      const previousBlock = this.chain[i - 1];
+
+      if (currentBlock.hash !== currentBlock.calculateHash()) {
+        return false;
+      }
+
+      if (currentBlock.previousHash !== previousBlock.hash) {
+        return false;
+      }
+    }
+
+    return true;
+  }
 }
 
 let doshaCoin = new Blockchain();
 doshaCoin.addBlock(new Block(1, "10/07/2021", { amount: 4 }));
 doshaCoin.addBlock(new Block(2, "12/07/2021", { amount: 10 }));
 
-console.log(JSON.stringify(doshaCoin, null, 4));
+//it will return true because we have not attempted to tamper with the blockchain
+//console.log("Is blockchain valid? " + doshaCoin.isChainValid());
+
+//after altering the amount it will return false on the console
+doshaCoin.chain[1].data = { amount: 100 };
+
+//let's recomputate the hash to see whether it will return
+doshaCoin.chain[1].hash = doshaCoin.chain[1].calculateHash();
+console.log("Is blockchain valid? " + doshaCoin.isChainValid());
+
+//console.log(JSON.stringify(doshaCoin, null, 4));
