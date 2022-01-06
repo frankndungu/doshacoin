@@ -1,4 +1,3 @@
-//comments
 //console.log("Mining block 1... ");
 //doshaCoin.addBlock(new Block(1, "10/07/2021", { amount: 4 }));
 
