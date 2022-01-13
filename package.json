@@ -13,12 +13,13 @@
   "keywords": [],
   "author": "Frank Ndungu",
   "license": "ISC",
-  "type":"module",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/dosha10/doshacoin/issues"
   },
   "homepage": "https://github.com/dosha10/doshacoin#readme",
   "dependencies": {
-    "cryptojs": "^2.5.3"
+    "cryptojs": "^2.5.3",
+    "elliptic": "^6.5.4"
   }
 }
