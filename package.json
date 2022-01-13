@@ -11,10 +11,14 @@
     "url": "git+https://github.com/dosha10/doshacoin.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Frank Ndungu",
   "license": "ISC",
+  "type":"module",
   "bugs": {
     "url": "https://github.com/dosha10/doshacoin/issues"
   },
-  "homepage": "https://github.com/dosha10/doshacoin#readme"
+  "homepage": "https://github.com/dosha10/doshacoin#readme",
+  "dependencies": {
+    "cryptojs": "^2.5.3"
+  }
 }
