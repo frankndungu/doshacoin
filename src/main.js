@@ -1,3 +1,5 @@
+import { Blockchain, Transactions } from './blockchain.js'
+
 let doshaCoin = new Blockchain();
 doshaCoin.createTransactions(new Transactions("address1", "address2", 100));
 doshaCoin.createTransactions(new Transactions("address2", "address1", 50));

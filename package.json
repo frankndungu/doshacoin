@@ -6,11 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dosha10/doshacoin.git"
+  },
   "keywords": [],
   "author": "",
-  "type": "module",
   "license": "ISC",
-  "dependencies": {
-    "crypto-js": "^4.1.1"
-  }
+  "bugs": {
+    "url": "https://github.com/dosha10/doshacoin/issues"
+  },
+  "homepage": "https://github.com/dosha10/doshacoin#readme"
 }
